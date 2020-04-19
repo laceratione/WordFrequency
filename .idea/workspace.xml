@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc6d08a7-9de2-4b85-bda7-c6265be91f3f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Project1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UOE0OGVJQoTnCJMqo9EdXoYjst" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Project1" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc6d08a7-9de2-4b85-bda7-c6265be91f3f" name="Default Changelist" comment="" />
+      <created>1575219019576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575219019576</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585485401732">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1585485401732" />
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1585378195957">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1585378195957" />
+    <state width="428" height="466" key="DebuggerActiveHint" timestamp="1587300265687">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="428" height="466" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1587300265687" />
+    <state width="1344" height="236" key="GridCell.Tab.0.bottom" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="236" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="236" key="GridCell.Tab.0.center" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="236" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="236" key="GridCell.Tab.0.left" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="236" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="236" key="GridCell.Tab.0.right" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="236" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="235" key="GridCell.Tab.1.bottom" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="235" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="235" key="GridCell.Tab.1.center" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="235" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="235" key="GridCell.Tab.1.left" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="235" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="1344" height="235" key="GridCell.Tab.1.right" timestamp="1587301107776">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1344" height="235" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1587301107776" />
+    <state width="981" height="463" key="XDebugger.FullValuePopup" timestamp="1585376673277">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="981" height="463" key="XDebugger.FullValuePopup/0.0.1366.768@0.0.1366.768" timestamp="1585376673277" />
+    <state x="334" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1587301002950">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="334" y="220" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587301002950" />
+    <state x="260" y="118" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584861753071">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="260" y="118" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.768@0.0.1366.768" timestamp="1584861753071" />
+    <state x="339" y="167" key="run.anything.popup" timestamp="1587297189319">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1587297189319" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1587296267532">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1587296267532" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
