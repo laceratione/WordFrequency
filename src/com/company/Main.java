@@ -1,70 +1,57 @@
 package com.company;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args){
         try{
-            String file = "";
-            String pathFile = "text1.txt";
-            HashMap<String, Double> wordFreq = new HashMap<String, Double>();
+            //находим все файлы из решения с форматом .txt
+            String pathRoot = System.getProperty("user.dir");
+            File dirRoot = new File(pathRoot);
+            List<File> filesDirRoot = Arrays.asList(dirRoot.listFiles());
 
-            //чтение текстового файла
-            BufferedReader reader = new BufferedReader(new FileReader(pathFile));
-            String tmpStr = "";
+            ArrayList<String> filesText = new ArrayList<String>();
 
-            while ((tmpStr = reader.readLine()) != null){
-                file += tmpStr;
+            for (File file:filesDirRoot) {
+                String path = file.getAbsolutePath();
+                if (path.contains(".txt"))
+                    filesText.add(path);
             }
 
-            //форматирование текста и удаление ненужных символов
-            String[] elems = {",", "!", "\\?", "–", "-", "%", "\"", "«", "»", ":"};
+            //подготовка парсеров и инициализация потоков
+            int lengthText = 0; //количество слов всего текста, а не конкретного файла
+            Container container = new Container();//глобальный HashMap
 
-            file = file.trim();
-            file = file.toLowerCase();
+            int countThreads = filesText.size();
+            FreqParser[] parsers = new FreqParser[countThreads];
+            Thread[] threads = new Thread[countThreads];
 
-            for (int i = 0; i < elems.length; i++)
-                file = file.replaceAll(elems[i] , "");
+            for (int i = 0; i < parsers.length; i++){
+                parsers[i] = new FreqParser(filesText.get(i), container);
+                parsers[i].ReadTextFromFile();
+                parsers[i].FormattingText();
 
-            file = file.replaceAll("\\." , " ");
-            file = file.replaceAll("[\\s]{2,}", " ");
+                lengthText += parsers[i].getLength();
 
-            //подсчет частоты слов
-            String[] words = file.split(" ");
-
-            for (int i = 0; i < words.length; i++){
-                int count = 0;
-                //если это слово ранее встречалось, то берем другое
-                boolean nextWord = false;
-
-                if (wordFreq.containsValue(words[i]))
-                        nextWord = true;
-
-                if (nextWord)
-                    continue;
-
-                for (int j = 0; j < words.length; j++){
-                    if (words[i].equals(words[j]))
-                        count++;
-                }
-
-                double freq = ((double) count/(double) words.length)*100;
-                wordFreq.put(words[i], freq);
+                threads[i] = new Thread(parsers[i]);
             }
 
-            //вывод таблицы
-            DecimalFormat df = new DecimalFormat("##.#####");
+            container.setLengthText(lengthText);
 
-            for(Map.Entry<String, Double> item:wordFreq.entrySet()){
-                System.out.println(item.getKey() + " - " + df.format(item.getValue()));
+            //выполнение потоков
+            for (Thread thread:threads) {
+                thread.start();
             }
+
+            //ожидание завершения потоков
+            for (Thread thread:threads) {
+                thread.join();
+            }
+
+            //выводим таблицу
+            container.ShowMap();
 
         }catch (Exception e){
             e.printStackTrace();
