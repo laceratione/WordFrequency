@@ -40,14 +40,13 @@ public class FreqParser implements Runnable {
 
     public void FormattingText(){
         try{
-            file = file.toLowerCase();
-
             for (int i = 0; i < unusedSymbols.length; i++){
                 file = file.replaceAll(unusedSymbols[i], "");
             }
 
             file = file.replaceAll("\\.", " ");
             file = file.replaceAll("[\\s]{2,}", " ");
+            file = file.toLowerCase();
             file = file.trim();
 
             words = file.split(" ");
@@ -62,12 +61,7 @@ public class FreqParser implements Runnable {
         for (int i = 0; i < words.length; i++) {
             int count = 0;
             //если это слово ранее встречалось, то берем другое
-            boolean nextWord = false;
-
             if (uniqueWords.contains(words[i]))
-                nextWord = true;
-
-            if (nextWord)
                 continue;
 
             //считаем количество повторений

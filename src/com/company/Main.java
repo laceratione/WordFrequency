@@ -12,7 +12,7 @@ public class Main {
             File dirRoot = new File(pathRoot);
             List<File> filesDirRoot = Arrays.asList(dirRoot.listFiles());
 
-            ArrayList<String> filesText = new ArrayList<String>();
+            List<String> filesText = new ArrayList<String>();
 
             for (File file:filesDirRoot) {
                 String path = file.getAbsolutePath();
