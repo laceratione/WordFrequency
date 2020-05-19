@@ -21,24 +21,17 @@ public class Main {
             }
 
             //подготовка парсеров и инициализация потоков
-            int lengthText = 0; //количество слов всего текста, а не конкретного файла
-            Container container = new Container();//глобальный HashMap
-
             int countThreads = filesText.size();
             FreqParser[] parsers = new FreqParser[countThreads];
             Thread[] threads = new Thread[countThreads];
 
             for (int i = 0; i < parsers.length; i++){
-                parsers[i] = new FreqParser(filesText.get(i), container);
+                parsers[i] = new FreqParser(filesText.get(i));
                 parsers[i].ReadTextFromFile();
                 parsers[i].FormattingText();
 
-                lengthText += parsers[i].getLength();
-
                 threads[i] = new Thread(parsers[i]);
             }
-
-            container.setLengthText(lengthText);
 
             //выполнение потоков
             for (Thread thread:threads) {
@@ -50,9 +43,11 @@ public class Main {
                 thread.join();
             }
 
-            //выводим таблицу
-            container.ShowMap();
+            DatabaseOperations databaseOperations = new DatabaseOperations();
+            //запись в БД
+            databaseOperations.WriteMap(parsers);
 
+            System.out.println("end");
         }catch (Exception e){
             e.printStackTrace();
         }

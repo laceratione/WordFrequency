@@ -2,7 +2,10 @@ package com.company;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FreqParser implements Runnable {
     private String file = "";
@@ -10,18 +13,19 @@ public class FreqParser implements Runnable {
     private String[] words;
     private String[] unusedSymbols = {",", "!", "\\?", "–", "-", "%", "\"", "«", "»", ":"};
 
-    private Container container;
-    private ArrayList<String> uniqueWords;
+    private HashMap<String, Double> wordFreq;
 
-    public FreqParser(String pathFile, Container container) {
+    public FreqParser(String pathFile) {
         this.pathFile = pathFile;
-        this.container = container;
-
-        uniqueWords = new ArrayList<String>();
+        wordFreq = new HashMap<String, Double>();
     }
 
-    public int getLength(){
-        return words.length;
+    public HashMap<String, Double> getWordFreq() {
+        return wordFreq;
+    }
+
+    public String getPathFile() {
+        return pathFile;
     }
 
     public void ReadTextFromFile(){
@@ -56,8 +60,18 @@ public class FreqParser implements Runnable {
         }
     }
 
+    public void ShowMap(){
+        DecimalFormat df = new DecimalFormat("##.#####");
+
+        for (Map.Entry<String, Double> item : wordFreq.entrySet()) {
+            System.out.println(item.getKey() + " - " + df.format(item.getValue()));
+        }
+    }
+
     @Override
     public void run(){
+        ArrayList<String> uniqueWords = new ArrayList<String>();
+
         for (int i = 0; i < words.length; i++) {
             int count = 0;
             //если это слово ранее встречалось, то берем другое
@@ -70,8 +84,9 @@ public class FreqParser implements Runnable {
                     count++;
             }
 
+            double freq = ((double)count/(double)words.length) * 100;
             uniqueWords.add(words[i]);
-            container.AddWordFreq(words[i], count);
+            wordFreq.put(words[i], freq);
         }
     }
 
