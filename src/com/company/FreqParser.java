@@ -11,7 +11,7 @@ public class FreqParser implements Runnable {
     private String file = "";
     private String pathFile;
     private String[] words;
-    private String[] unusedSymbols = {",", "!", "\\?", "–", "-", "%", "\"", "«", "»", ":"};
+    private String[] unusedSymbols = {",", "!", "\\?", "–", "-", "%", "\"", "«", "»", ":", "“", "”"};
 
     private HashMap<String, Double> wordFreq;
 
@@ -28,6 +28,7 @@ public class FreqParser implements Runnable {
         return pathFile;
     }
 
+    //чтение текстового файла
     public void ReadTextFromFile(){
         try{
             BufferedReader reader = new BufferedReader(new FileReader(pathFile));
@@ -42,6 +43,7 @@ public class FreqParser implements Runnable {
         }
     }
 
+    //форматирование текстового файла
     public void FormattingText(){
         try{
             for (int i = 0; i < unusedSymbols.length; i++){
@@ -60,6 +62,7 @@ public class FreqParser implements Runnable {
         }
     }
 
+    //отобразить пары ключ-значение
     public void ShowMap(){
         DecimalFormat df = new DecimalFormat("##.#####");
 
@@ -68,6 +71,7 @@ public class FreqParser implements Runnable {
         }
     }
 
+    //подсчет частоты слов
     @Override
     public void run(){
         ArrayList<String> uniqueWords = new ArrayList<String>();

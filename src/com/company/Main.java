@@ -11,7 +11,6 @@ public class Main {
             String pathRoot = System.getProperty("user.dir");
             File dirRoot = new File(pathRoot);
             List<File> filesDirRoot = Arrays.asList(dirRoot.listFiles());
-
             List<String> filesText = new ArrayList<String>();
 
             for (File file:filesDirRoot) {
@@ -47,7 +46,6 @@ public class Main {
             //запись в БД
             databaseOperations.WriteMap(parsers);
 
-            System.out.println("end");
         }catch (Exception e){
             e.printStackTrace();
         }
